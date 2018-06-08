@@ -14,20 +14,17 @@ class App extends Component {
 			]
 		};
 	}
-	
+  toggleComplete(index) {
+    console.log(index)
+  }
    render() {
      return (
        <div className="App">
         <ul>
-<<<<<<< HEAD
-		{this.state.todos.map( (todo, index} =>
-         <ToDo key={ index} description={ todo.description } isCompleted={ todo.isCompleted}/>
-=======
-         { this.state.todos.map( (todo, index) =>
-		    <ToDo key ={ index } description={ todo.description } isCompleted={ todo.isCompleted} />
-		  )}
->>>>>>> checkpoint-8-ToDoAppStateAndProps
-        </ul>       
+		{this.state.todos.map(( todo, index) =>
+          <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
+           )}
+         </ul>
        </div>
      );
    }
