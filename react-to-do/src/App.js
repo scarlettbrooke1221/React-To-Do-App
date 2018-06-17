@@ -24,6 +24,7 @@ class App extends Component {
     e.preventDefault();
     if (!this.state.newTodoDescription) {return}
     const newTodo = { description: this.state.newTodoDescription, isCompleted: false };
+<<<<<<< HEAD
    this.setState({ todos: [...this.state.todos, newTodo], newTodoDescription: '' });
      }
 
